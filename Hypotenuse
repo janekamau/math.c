@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+
+float calculate_hypotenuse(float side1, float side2) {
+    float hypotenuse = sqrt(side1 * side1 + side2 * side2);
+    return hypotenuse;
+}
+
+int main() {
+    float side1, side2;
+    printf("Enter the lengths of the two sides of the right-angled triangle:\n");
+    scanf("%f %f", &side1, &side2);
+
+    float hypotenuse = calculate_hypotenuse(side1, side2);
+    printf("The length of the hypotenuse is %.2f\n", hypotenuse);
+
+    return 0;
+}
+
+/* To compile, use the command: gcc -o hypotenuse hypotenuse.c -lm.
+Run the compiled executable: ./hypotenuse./*
